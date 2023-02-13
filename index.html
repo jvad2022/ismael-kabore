@@ -67,6 +67,9 @@
         <p>
             Cette formation est gratuite et s'adresse particulièrement aux étudiants et professionnels (propriétaires d'entreprises, sociétés et cadres de l'administration), pour apprendre et comprendre la programmation.Si vous aimez notre pédagogie partagez ce lien avec votre entourage et amis pour les permettre eux aussi d’apprendre la programmation. 
         </p>
+        <h2>
+            Dans cette formation, nous ne pourrions pas vous donner 100% du langage Python par contre, les cas pratique abordés vous permettrons d’avoir 100% des bases sur le langage Python pour permettre à chacun de l'utiliser python dans son domaine d'activité. Veuillez créer des groupes de travail pour vous perfectionner selon votre domaine. Si vous vous perfectionner en python, vous n'aurez pas de limite pour la création de vos page Web (HTML), insertion de JavaScrpit sur vos page HTML, et la création des applications Web avec le Framework Django.
+        </h2>
     </div>
     <div class="contenu">
         <div class="box">
@@ -539,20 +542,18 @@
                 Essayer d'utiliser While pour demander le nom de l'utilisateur et tant qu’il ne rentre pas quelque chose on va lui redemander son nom jusqu'à ce qu'il rentre quelque chose. Pour le nom on ne va pas d'abord gérer les cas d'erreur. Essayer de faire l'exercice c'est important de pratiquer de votre côté.
             </h2>
             <p>
-nom = ""
-while nom == "":
-    nom = input ("Quel est votre nom ? ")
-age = 0
-while age == 0:
-    
-    age_reponse = input ("Quel est votre age ? ")
-    try:
-        age = int(age_reponse) 
-    except:
-        print("Erreur : vous devez rentrer un nombre pour l’âge")
-
-print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
-print(" l'an prochain vous avez " + str(age+1) + ", ans")
+                nom = ""
+                while nom == "":
+                    nom = input ("Quel est votre nom ? ")
+                age = 0
+                while age == 0:
+                    age_reponse = input ("Quel est votre age ? ")
+                    try:
+                        age = int(age_reponse) 
+                    except:
+                        print("Erreur : vous devez rentrer un nombre pour l’âge")
+                print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
+                print(" l'an prochain vous avez " + str(age+1) + ", ans")
 </p>
 <h2>Message du Terminal avec plusieur validations sans nom et un mauvais caractère au niveau de l'âge</h2>
 <p>
@@ -567,6 +568,10 @@ Erreur : vous devez rentrer un nombre pour l’âge
 Quel est votre age ? 45
 Vous vous appelez  Toto, vous avez 45, ans
 l'an prochain vous avez 46, ans
+</p>
+<h2>Cas pratique</h2>
+<p>
+    Le cabinet Je Vous Avalise le Développement en abrégée JVAD Consulting Room, vous demande de créer un mot de passe pour l’accès à sa plateforme. Le mot de passe doit être JVAD en majuscule. Si le mot de passe est correct, vous devez afficher ce message à l’utilisateur : Mot de Passe correct, vous avez accès à la plateforme. Je vous en dirai pas plus essayer.
 </p>
             <h2>Chapitre III: Les fonctions</h2>
 
@@ -646,8 +651,28 @@ l'an prochain vous avez 46, ans
             </p>
             <h2>Boucles</h2>
             <p>
-                while condition: Boucle Tant que while a >= 0: a = a −1 for k in range(n): Boucle For for k in range(n): de 0 à n−1 print(k)for k in range(m,n): Boucle For for k in range(m,n): de m a` n−1 print(k)for k in range(m,n,k): Boucle For de 0 a` n for k in range(m,n,k): exclu par pas de k print(k) for x in L: Boucle For pour x for x in L: parcourant L print(x)
+                while condition: Boucle Tant que while a >= 0: a = a −1 for k in range(n): Boucle For for k in range(n): de 0 à n−1 print(k)for k in range(m,n): Boucle For for k in range(m,n): de m à n−1 print(k) for k in range(m,n,k): Boucle For de 0 à n for k in range(m,n,k): exclu par pas de k print(k) for x in L: Boucle For pour x for x in L: parcourant L print(x)
             </p>
+            <h2>Structuration de notre programme</h2>
+            <p>a/ Schéma Conceptuel des Données (SCD), que l'on désigne aussi par les termes Modèle Conceptuel des Données (MCD), est une représentation graphique de la structure des données, dans laquelle ne figure aucune redondance.</p>
+            <h2>Base de données de notre programme:</h2>
+            <p>âge et nom</p>
+            <h2>Traitement ou programme</h2>
+            <p>on demande le nom et l'âge d'une personne</p>
+            <h2>résultat</h2>
+            <p>on affiche le non et l'âge d'une personne</p>
+            <p>b/ Schéma Logique des Données (SLD), que l'on désigne aussi par les termes Modèle Logique des Données (MLD), est une représentation théorique, qui se déduit d'un Modèle Conceptuel des Données (MCD) et qui explique les liens qui seront mis en oeuvre dans la bases de données</p>
+            <h2>Traitement de notre programme</h2>
+            <h2>on deamande d'abord le nom</h2>
+            <p>Quel est votre Nom ?</p>
+            <h2>ensuite, on demande l'âge</h2>
+            <p>Quel est votre âge ?</p>
+            <h2>resultat</h2>
+            <h2>on affiche d'abord le nom de la personne</h2>
+            <p>Vous vous appelez + Nom, vous avez + âge ans</p>
+            <h2>ensuite</h2>
+            <p>L'an prochain vous aurez âge+1</p>
+            
         </div>
         </div>
         <div class="box">
