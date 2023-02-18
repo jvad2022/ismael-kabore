@@ -813,7 +813,7 @@ l'an prochain vous avez 46, ans
 
                 age=demander_age()
                 print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
-                print(" l'an prochain vous avez " + str(age+1) + ", ans")
+                print(" l'an prochain vous aurez " + str(age+1) + ", ans")
             </p>
             <h2>Message Terminal</h2>
             <p>
@@ -822,16 +822,80 @@ l'an prochain vous avez 46, ans
                 Quel est votre nom ? caroline
                 Quel est votre age ? 27
                 Vous vous appelez  caroline, vous avez 27, ans
-                l'an prochain vous avez 28, ans
+                l'an prochain vous aurez 28, ans
                 PS C:\Users\Surface>
             </p>
             <h2>
-                Remarque importante : les lignes de codes sont lu de haut en bas ; par contre pour les fonctions c’est très différent. Le système va d’abord exécuter le programme principal et quand il va arriver dans l’appel de fonction, il ira rentrer dans la fonction et faire des pas. Je vous en reparlerai avec des explication claires sur cette pratique et l’utilisation  du debugger . le debugger est le bouton en haut à droite de votre écran sous PYCHARM. Par contre sous Visual Studio Code, il vous faut faire des manipulations pour le faire apparaitre. 
+                Remarque importante : les lignes de codes sont lu de haut en bas , par contre pour les fonctions c’est très différent. Le système va d’abord exécuter le programme principal et quand il va arriver dans l’appel de fonction, il ira rentrer dans la fonction et faire des pas. Je vous en reparlerai avec des explication claires sur cette pratique et l’utilisation  du debugger . le debugger est le bouton en haut à droite de votre écran sous PYCHARM (Onglet en forme d’insecte). Par contre sous Visual Studio Code, il vous faut faire des manipulations pour le faire apparaitre. 
                 Savoir debugger (chasser les erreurs) vous permet de comprendre  plus rapidement en code source, vous pouvez aller pas à pas dans votre programme,  analysé les variables, voir les appels des fonctions. Maitriser l’outil debugger vous rendra invincible en programmation que vous soyez seul ou en équipe. Quand vous aurez un bug (problème), ça va arriver, vous saurez comment faire pour le résoudre.Je vous en reparlerai de manière claire dans  la vidéo sur ce module sur notre chaine youtube et 
                 surtout l’utilisation du debugger. Veuillez cliquer sur lien pour visiter la chaine uniquement créer pour la formation:<a href="https://www.youtube.com/channel/UCUPLOxEcJLlwSTKOy0W1hQQ" target="_blank">https://www.youtube.com/channel/UCUPLOxEcJLlwSTKOy0W1hQQ</a>
-
             </h2>
-            
+            <p>
+                Nous allons désormais raisonner avec une entité (PERSONNE)
+            </p>
+            <h2>Entité PERSONNE</h2>
+            <P>
+                Une personne a un  nom et un âge
+            </P>
+            <h2>
+                Analysons la base de données
+            </h2>
+            <p>
+                Créations d’une table contenant deux (2) champs : le champ nom de type chaine de caractère et un champ âge de type int (nombre).
+            </p>
+            <h2>Traitement du programme MLD</h2>
+            <p>Nous allons créer une fonction pour demander le nom et l’âge.</p>
+            <h2>
+                Résultats
+            </h2>
+            <p>
+                Vous vous appelez + nom de la personne, vous avez age de la personne, ans
+                l'an prochain vous aurez age de la personne + 1 , ans
+            </p>
+            <h2>Programme</h2>
+            <p>
+                def demander_nom():
+                reponse_nom = ""
+                while reponse_nom =="":
+                    reponse_nom = input ("Quel est votre nom ? ")
+                return reponse_nom
+
+
+            def demander_age():
+            age = 0
+            while age == 0:
+                age_reponse = input ("Quel est votre age ? ")
+                try:
+                    age = int(age_reponse) 
+                except:
+                    print("Erreur : vous devez rentrer un nombre pour l’âge")
+            return age 
+    
+
+        nom = demander_nom()
+        age=demander_age()
+        print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
+        print(" l'an prochain vous aurez " + str(age+1) + ", ans")
+        </p>
+        <h2>Message Terminal</h2>
+        <p>
+            c:/Users/Surface/Desktop/formation_python/variables.py
+            Quel est votre nom ? ismael
+            Quel est votre age ? 22
+            Vous vous appelez  ismael, vous avez 22, ans
+            l'an prochain vous aurez 23, ans
+        </p>
+        <div class="box">
+            <div class="imbox">
+                <img src="./image/carp-440630__480.jpg" alt="">
+            </div>
+            <div class="text">
+                <h2>
+                    Pas de panique si vous vous n’en sortez pas, la première vidéo sur la chaine dédiée à la formation portera sur ce module. Ceux qui souhaitent peuvent s’abonner pour être avertis en premier quand la vidéo sera disponible courant mars 2023.
+                </h2>
+                
+            </div>
+
         </div>
         </div>
         <div class="box">
