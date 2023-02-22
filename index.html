@@ -171,7 +171,7 @@
                     Ex : nom = input ("Quel est votre nom ?")
                     Print("vous vous appelez"+ nom)
                     Cliquez sur Play , entré votre nom et valider avec la touche entrer pour voir le résultat s’affiché.
-                    NB : ce que nous venons de faire avec l’opérateur + s’appelle la concaténation c’est-à-dire coller des chaines de caractère entre elle. Essayer de manipuler l’espaces entre les accolâtes et la variables pour comprendre comment créer des espaces dans une phrase.
+                    NB : ce que nous venons de faire avec l’opérateur + s’appelle la concaténation c’est-à-dire coller des chaines de caractère entre elle. Essayer de manipuler l’espaces entre les griffes, les chaines de caractères et la variables pour comprendre comment créer des espaces dans une phrase.
                 </p>
                 <h2>II/ Méthode</h2>
                 
@@ -779,9 +779,9 @@ l'an prochain vous avez 46, ans
             <p>a/ Schéma Conceptuel des Données (SCD), que l'on désigne aussi par les termes Modèle Conceptuel des Données (MCD), est une représentation graphique de la structure des données, dans laquelle ne figure aucune redondance.</p>
             <h2>Base de données de notre programme:</h2>
             <p>âge et nom</p>
-            <h2>Traitement ou programme</h2>
+            <h2>b/ Traitement ou programme</h2>
             <p>on demande le nom et l'âge d'une personne</p>
-            <h2>résultat</h2>
+            <h2>c/ résultat</h2>
             <p>on affiche le non et l'âge d'une personne</p>
             <p>b/ Schéma Logique des Données (SLD), que l'on désigne aussi par les termes Modèle Logique des Données (MLD), est une représentation théorique, qui se déduit d'un Modèle Conceptuel des Données (MCD) et qui explique les liens qui seront mis en oeuvre dans la bases de données</p>
             <h2>Traitement de notre programme</h2>
@@ -885,6 +885,9 @@ l'an prochain vous avez 46, ans
             Vous vous appelez  ismael, vous avez 22, ans
             l'an prochain vous aurez 23, ans
         </p>
+        <h2></h2>
+
+
         <div class="box">
             <div class="imbox">
                 <img src="./image/carp-440630__480.jpg" alt="">
@@ -893,19 +896,129 @@ l'an prochain vous avez 46, ans
                 <h2>
                     Pas de panique si vous vous n’en sortez pas, la première vidéo sur la chaine dédiée à la formation portera sur ce module. Ceux qui souhaitent peuvent s’abonner pour être avertis en premier quand la vidéo sera disponible courant mars 2023.
                 </h2>
-                
-            </div>
 
-        </div>
-        </div>
-        <div class="box">
-            <div class="imbox">
-                <img src="" alt="">
-            </div>
-            <div class="text">
-                <h3>
                 
-                </h3>
+            </div>
+            <h2>1/ Variables locales et variables  globales </h2>
+            <p>
+                Lorsqu’on manipule des fonctions, il est essentiel de bien comprendre comment se comportent les variables. Une variable est dite locale lorsqu’elle est créée dans une fonction. Elle n’existera et ne sera visible que lors de l’exécution de ladite fonction.
+                Une variable est dite globale lorsqu’elle est créée dans le programme principal. Elle sera visible partout dans le programme.
+                Ceci ne vous paraît pas clair? Nous allons prendre un exemple simple qui vous aidera à mieux saisir ces concepts. Observez le code suivant :
+            </p>
+            <p>
+                Attention : toute variable déclarée dans une fonction n'est utilisable que dans cette même fonction. Ces variables spécifiques à une seule fonction ont un nom : les variables locales. Déclarées en dehors des fonction, on parle de variables globales. Mais on évite de créer des variables locales et globales qui portent le même nom. En règle générale, on préfère utiliser des variables locales (pour éviter les confusions). Dans ce cas on utilise pas return, ni de variable dans l’appel de la fonction.
+            </p>
+            <h2>Exercice d'application</h2>
+            <h3> définition d'une fonction carre()</h3>
+            <p>
+                ligne 1 def carre(x): 
+                ligne 2 y = x**2 
+                ligne 3 return y
+
+                ligne 4 z = 5 
+                ligne 5 resultat = carre(z) 
+                ligne 6 print(resultat)
+            </p>
+            <h3>
+                Message Terminal
+            </h3>
+            <p>
+                PS C:\Users\Surface\Desktop\formation_python> & C:/Users/Surface/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Surface/Desktop/formation_python/variables1.py
+                25
+                PS C:\Users\Surface\Desktop\formation_python>   
+            </p>
+            <h2>Regardons maintenant ce qui se passe dans le code ci-dessus, étape par étape : </h2>
+            <p>
+                Pour la suite des explications, nous allons utiliser l’excellent le  debugger (chassé les erreurs) qui permet de visualiser l’état des variables au fur et à mesure de l’exécution d’un code Python. Avant de poursuivre, nous vous conseillons de prendre 5 minutes pour utiliser le debugger.
+                — Étape 1 : Python est prêt à lire la première ligne de code.
+                — Étape 2 : Python met en mémoire la fonction carre(). Notez qu’il ne l’exécute pas! La fonction est mise dans un espace de la mémoire nommé Global frame, il s’agit de l’espace du programme principal. Dans cet espace, seront stockées toutes les variables globales créées dans le programme. Python est maintenant prêt à exécuter le programme principal.
+                — Étape 3 : Python lit et met en mémoire la variable z. Celle-ci étant créée dans le programme principal, il s’agira d’une variable globale. Ainsi, elle sera également stockée dans le Global frame.
+                — Étape 4 : La fonction carre () est appelée et on lui passe en argument l’entier z. La fonction s’exécute et un nouveau cadre est créé dans lequel le debugger va indiquer toutes les variables locales à la fonction. Notez bien que la variable passée en argument, qui s’appelle x dans la fonction, est créée en tant que variable locale. On remarquera aussi que les variables globales situées dans le Global frame sont toujours là.
+                — Étape 5 : Python est maintenant prêt à exécuter chaque ligne de code de la fonction.
+                — Étape 6 : La variable y est créée dans la fonction. Celle-ci est donc stockée en tant que variable locale à la fonction.
+                — Étape 7 : Python s’apprête à renvoyer la variable locale y au programme principal. Le debugger nous indique le contenu de la valeur renvoyée.
+                Nous espérons que cet exemple guidé facilitera la compréhension des concepts de variables locales et globales. Cela viendra aussi avec la pratique. Nous irons un peu plus loin sur les fonctions dans la vidéo sur la chaine youtube. D’ici là, essayez de vous entraîner au maximum avec les fonctions. C’est un concept ardu, mais il est impératif de le maîtriser. En ﬁn, comme vous avez pu le constater, le debugger nous a grandement aidé à comprendre ce qui se passait. N’hésitez pas à l’utiliser sur des exemples ponctuels, cet outil vous rendra invincible  en programmation car il vous aidera à visualiser ce qui se passe lorsqu’un code ne fait pas ce que vous attendez. 
+            </p>
+        
+            <h2>Reprenons notre exemple en utilisant une variable globale au niveau de l’âge pour mieux comprendre cette notion.</h2>
+
+            <p>
+                def demander_nom():
+        reponse_nom = ""
+        while reponse_nom =="":
+            reponse_nom = input ("Quel est votre nom ? ")
+        return reponse_nom
+    
+    
+    age = 0
+    def demander_age():
+        
+        while age == 0:
+            age_reponse = input ("Quel est votre age ? ")
+            try:
+                age = int(age_reponse) 
+            except:
+                print("Erreur : vous devez rentrer un nombre pour l’âge")
+    
+        
+    
+    nom = demander_nom()
+    demander_age()
+    print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
+    print(" l'an prochain vous aurez " + str(age+1) + ", ans")
+            </p>
+            <h2>Message Terminal</h2>
+            <p>
+                PS C:\Users\Surface\Desktop\formation_python> & C:/Users/Surface/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Surface/Desktop/formation_python/variables.py
+    Quel est votre nom ? ismael
+    Traceback (most recent call last):
+    File "c:\Users\Surface\Desktop\formation_python\variables.py", line 21, in <module>
+        demander_age()
+    File "c:\Users\Surface\Desktop\formation_python\variables.py", line 11, in demander_age
+        while age == 0:
+    UnboundLocalError: local variable 'age' referenced before assignment
+    PS C:\Users\Surface\Desktop\formation_python>
+            </p>
+            <h2>Interprétation</h2>
+            <p>
+                Il nous dit que locale variable âge est utilisé avant qu’on lui donne une valeur. Pour lui expliquer ça on va lui dire que âge est une variable globale en écrivant  (global age) essayons.
+            </p>
+            <h2>Reprenons notre exemple en lui expliquant avec (global age)</h2>
+            <p>
+                def demander_nom():
+    reponse_nom = ""
+    while reponse_nom =="":
+        reponse_nom = input ("Quel est votre nom ? ")
+    return reponse_nom
+
+
+age = 0
+def demander_age():
+    global age
+    while age == 0:
+        age_reponse = input ("Quel est votre age ? ")
+        try:
+            age = int(age_reponse) 
+        except:
+            print("Erreur : vous devez rentrer un nombre pour l’âge")
+
+    
+
+nom = demander_nom()
+demander_age()
+print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
+print(" l'an prochain vous aurez " + str(age+1) + ", ans")
+            </p>
+            <h2>Message Terminal</h2>
+            <p>
+                PS C:\Users\Surface\Desktop\formation_python> & C:/Users/Surface/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Surface/Desktop/formation_python/variables.py
+Quel est votre nom ? ismael
+Quel est votre age ? 22
+Vous vous appelez  ismael, vous avez 22, ans
+l'an prochain vous aurez 23, ans
+PS C:\Users\Surface\Desktop\formation_python>
+
+            </p>
                 
             </div>
         </div>
@@ -928,10 +1041,10 @@ l'an prochain vous avez 46, ans
             <div class="text">
                 <h3>Kiswendsida Ismael KABORE</h3>
             <h2>
-                Consultant comptable-fiscaliste, développeur freelance logiciels de bureau, android et Mac IOS.  
+                Consultant: comptable-fiscaliste, développeur freelance logiciels de bureau, android et Mac IOS.  
             </h2>
             <h2>
-                Webmaster développeur de site web responsive sur bureau, tablettes, et smartphone android
+                Webmaster: développeur de site web responsive sur bureau, tablettes, et smartphone android
             </h2>
 
             </div>
