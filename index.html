@@ -1019,7 +1019,103 @@ l'an prochain vous aurez 23, ans
 PS C:\Users\Surface\Desktop\formation_python>
 
             </p>
-                
+            <h2>2/ L’argument ou paramètre de fonction</h2>
+            <p>
+                Dans 90% des programmes, la variable locale est utilisée par ce qu’elle rend le code indépendant et réutilisable et rendra la fonction plus modulaire et indépendante du programme principal car elle ne dépend pas des variables définis à l’extérieur. Essayons de réutilisé notre fonction pour demander l’âge d’une deuxième personne.  Nous allons donc créer le l’argument ou paramètre (nom de la personne).
+            </p>
+            <h2>Reprenons notre programme</h2>
+            <p>
+                def demander_nom():
+    reponse_nom = ""
+    while reponse_nom =="":
+        reponse_nom = input ("Quel est votre nom ? ")
+    return reponse_nom
+
+
+
+def demander_age(nom_personne):
+    age = 0
+    while age == 0:
+        age_reponse = input ("Quel est votre age ? ")
+        try:
+            age = int(age_reponse) 
+        except:
+            print("Erreur : vous devez rentrer un nombre pour l’âge")
+    return age
+    
+
+nom1 = demander_nom()
+nom2 = demander_nom()
+age1 = demander_age(nom1)
+age2 = demander_age(nom2)
+print(" Vous vous appelez  " + nom1 + ", vous avez " + str(age1) + ", ans")
+print(" l'an prochain vous aurez " + str(age1+1) + ", ans")
+print(" Vous vous appelez  " + nom2 + ", vous avez " + str(age2) + ", ans")
+print(" l'an prochain vous aurez " + str(age2+1) + ", ans")
+            </p>
+            <h2>Message Terminal</h2>
+            <p>
+                PS C:\Users\Surface\Desktop\formation_python> & C:/Users/Surface/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Surface/Desktop/formation_python/variables.py
+Quel est votre nom ? jacques
+Quel est votre nom ? ismael
+Quel est votre age ? 45
+Quel est votre age ? 32
+Vous vous appelez  jacques, vous avez 45, ans
+l'an prochain vous aurez 46, ans
+Vous vous appelez  ismael, vous avez 32, ans
+l'an prochain vous aurez 33, ans
+PS C:\Users\Surface\Desktop\formation_python>
+            </p>
+            <h2>Attention à l’appel des fonctions au niveau de l’âge, il faut passer en paramètre nom1 sous-entendu le nom de première personne et nom2, aussi au niveau de l’affichage des informations des personnes. nom_personne est un paramètre de fonction et nom1 et nom2 sont des arguments. </h2>
+            <p>
+                Raisonnons maintenant MLD avec notre base données contenant la table personne et les champs (nom et âge) et afficher les informations de la personne par ordre d’abord le nom en suite l’âge. 
+            </p>
+            <p>
+                def afficher_informations_personne(nom,age):
+    print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
+    print(" l'an prochain vous aurez " + str(age+1) + ", ans")
+
+
+def demander_nom():
+    reponse_nom = ""
+    while reponse_nom =="":
+        reponse_nom = input ("Quel est votre nom ? ")
+    return reponse_nom
+
+
+
+def demander_age(nom_personne):
+    age = 0
+    while age == 0:
+        age_reponse = input ("Quel est votre age ? ")
+        try:
+            age = int(age_reponse) 
+        except:
+            print("Erreur : vous devez rentrer un nombre pour l’âge")
+    return age
+    
+
+nom1 = demander_nom()
+nom2 = demander_nom()
+age1 = demander_age(nom1)
+age2 = demander_age(nom2)
+
+afficher_informations_personne(nom1,age1)
+afficher_informations_personne(nom2,age2)
+            </p>
+            <p>
+                PS C:\Users\Surface\Desktop\formation_python> & C:/Users/Surface/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Surface/Desktop/formation_python/variables.py
+Quel est votre nom ? arielle
+Quel est votre nom ? adora
+Quel est votre age ? 12
+Quel est votre age ? 8
+Vous vous appelez  arielle, vous avez 12, ans
+l'an prochain vous aurez 13, ans
+Vous vous appelez  adora, vous avez 8, ans
+l'an prochain vous aurez 9, ans
+PS C:\Users\Surface\Desktop\formation_python>
+            </p>
+            <h2>Attention l'ordre est important en MLD</h2>
             </div>
         </div>
     </div>
