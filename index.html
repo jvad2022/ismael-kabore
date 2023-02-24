@@ -1116,6 +1116,130 @@ l'an prochain vous aurez 9, ans
 PS C:\Users\Surface\Desktop\formation_python>
             </p>
             <h2>Attention l'ordre est important en MLD</h2>
+            <h2>2/ Condition et variable (booleen)</h2>
+            <h2>Condition (vraie ou faux) </h2>
+            <p>Si l’âge >= 18 vous êtes majeur sinon vous êtes mineur</p>
+            <h2>utilisation de if (si) et else (sinon) </h2>
+            <h3>reprenons notre exemple et enrichir avec cette condition jean a 15 ans et paul 45 ans</h3>
+            <h2>Programme</h2>
+            <p>
+                def afficher_informations_personne(nom,age):
+    print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
+    print(" l'an prochain vous aurez " + str(age+1) + ", ans")
+    if age>= 18 :
+        print("vous êtes majeur")
+    else:
+        print("vous êtes mineur")
+    
+    
+def demander_nom():
+    reponse_nom = ""
+    while reponse_nom =="":
+        reponse_nom = input ("Quel est votre nom ? ")
+    return reponse_nom
+
+
+
+def demander_age(nom_personne):
+    age = 0
+    while age == 0:
+        age_reponse = input ("Quel est votre age ? ")
+        try:
+            age = int(age_reponse) 
+        except:
+            print("Erreur : vous devez rentrer un nombre pour l’âge")
+    return age
+    
+
+nom1 = demander_nom()
+nom2 = demander_nom()
+age1 = demander_age(nom1)
+age2 = demander_age(nom2)
+
+afficher_informations_personne(nom1,age1)
+afficher_informations_personne(nom2,age2)
+            </p>
+            <h2>Message Terminal</h2>
+            <p>
+                PS C:\Users\Surface\Desktop\formation_python> & C:/Users/Surface/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Surface/Desktop/formation_python/variables.py
+Quel est votre nom ? jean
+Quel est votre nom ? paul
+Quel est votre age ? 15
+Quel est votre age ? 45
+Vous vous appelez  jean, vous avez 15, ans
+l'an prochain vous aurez 16, ans
+vous êtes mineur
+Vous vous appelez  paul, vous avez 45, ans
+l'an prochain vous aurez 46, ans
+vous êtes majeur
+PS C:\Users\Surface\Desktop\formation_python>
+            </p>
+            <h2>perfectionnement du  programme par l'utilisation de la condition elif (sinon si) </h2>
+            <p>
+                Reprenons notre exemple en ajoutant deux cas : si la personne a 17, il est presque majeur et a 18 ans Tout juste majeur.
+            </p>
+            <h2>Programme avec jean 17 ans et paul 18 ans</h2>
+            <p>
+                def afficher_informations_personne(nom,age):
+    print(" Vous vous appelez  " + nom + ", vous avez " + str(age) + ", ans")
+    print(" l'an prochain vous aurez " + str(age+1) + ", ans")
+    if age== 17 :
+        print("vous  êtes presque majeur ")
+    elif age== 18 :
+        print("vous  êtes tout juste majeur ")
+    elif age> 18 :
+        print("vous êtes majeur")
+    else:
+        print("vous êtes mineur")
+    
+    
+def demander_nom():
+    reponse_nom = ""
+    while reponse_nom =="":
+        reponse_nom = input ("Quel est votre nom ? ")
+    return reponse_nom
+
+
+
+def demander_age(nom_personne):
+    age = 0
+    while age == 0:
+        age_reponse = input ("Quel est votre age ? ")
+        try:
+            age = int(age_reponse) 
+        except:
+            print("Erreur : vous devez rentrer un nombre pour l’âge")
+    return age
+    
+
+nom1 = demander_nom()
+nom2 = demander_nom()
+age1 = demander_age(nom1)
+age2 = demander_age(nom2)
+
+afficher_informations_personne(nom1,age1)
+afficher_informations_personne(nom2,age2)
+            </p>
+            <h2>Message du Terminal</h2>
+            <p>
+                PS C:\Users\Surface\Desktop\formation_python> & C:/Users/Surface/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Surface/Desktop/formation_python/variables.py
+Quel est votre nom ? jean
+Quel est votre nom ? paul
+Quel est votre age ? 17
+Quel est votre age ? 18
+Vous vous appelez  jean, vous avez 17, ans
+l'an prochain vous aurez 18, ans
+vous  êtes presque majeur
+Vous vous appelez  paul, vous avez 18, ans
+l'an prochain vous aurez 19, ans
+vous  êtes tout juste majeur
+PS C:\Users\Surface\Desktop\formation_python>
+            </p>
+            <h2>attention l'ordre est important</h2>
+            
+
+
+
             </div>
         </div>
     </div>
