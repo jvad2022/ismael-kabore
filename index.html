@@ -3,58 +3,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Kiswendsida Ismael KABORE CLASSROOM</title>
+    <link rel="shortcut icon" href="./image/1640371817195.jpg">
+    <link rel="stylesheet" href="style.css">
 </head
 
 <body>
 
+    <div class="click-event box">
+        <h4>Quelle est la Condition Générale de Valeur (CGV) de nos formations en ligne ?</h4>
+        <button id="btn-1">La formation est gratuite</button>
+        <button id="btn-2">La foramtion est payante</button>
+        <h5>La bonne réponse est La formation est gratuite</h5>
+    </div>
+
+    <div class="mousemove"></div>
+    <div class="keypress box">
+        <h2>Vous appuyez sur la touche : <span id="key"></span></h2>
+    </div>
+
+    <form action="" class="box">
+        <input type="text" placeholder="Entrez votre nom">
+    
+        <select>
+            <option value="">Sélectionner votre appreciation site web</option>
+            <option value="Tres Bien">Tres Bien</option>
+            <option value="Passable">Passable</option>
+            <option value="Bien">Bien</option>
+            <option value="Mediocre">Mediocre</option>
+        </select>
+    
+        <input type="checkbox" id="cgv">
+        <label for="cgv">Accepter les CGV</label>
+    
+        <input type="submit" value="Valider">
+        <div></div>
+    </form>
 
 <header>
-    <a href="#" class="logo"><span>K</span>iswendsida Ismael KABORE CLASSROOM</a>
+    <!-- <a href="#" class="logo"><span>K</span>iswendsida Ismael KABORE CLASSROOM</a> -->
     <div class ="menutoggle" onclick="toggleMenu();"> </div>
-    <ul class="navbar">
-        <li><a href="#banniere" onclick="toggleMenu();">Acceuil</a></li>
-        <li><a href="#apropos" onclick="toggleMenu();">A Propos De Nous</a></li>
-        <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
-        <li><a href="#expert" onclick="toggleMenu();">Expert</a></li>
-        <li><a href="#temoignage" onclick="toggleMenu();">Temoignage</a></li>
-        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-        <a href="#" class="btn-reserve" onclick="toggleMenu();">Reservation</a>
-    </ul>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#banniere" onclick="toggleMenu();">Acceuil</a></li>
+            <li><a href="#apropos" onclick="toggleMenu();">A Propos De Nous</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#expert" onclick="toggleMenu();">Expert</a></li>
+            <li><a href="#temoignage" onclick="toggleMenu();">Temoignage</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+            <a href="#" class="btn-reserve" onclick="toggleMenu();">Reservation</a>
+        </ul>
+    </nav>
 
 
-</header>
-<section class="banniere" id="banniere">
-    <div class="contenu">
-        <h2>Formation en ligne sur le langage Python-HTML-CSS-Javascript-Framework Django</h2>
+    </header>
+        <section class="banniere" id="banniere">
+            <div class="contenu">
+                <h2>Formation en ligne sur le langage Python-HTML-CSS-Javascript-Framework Django</h2>
         
-        <a href="#" class="btn1">Menu</a>
-        <a href="#" class="btn2">Réservation</a>
-    </div>
-</section>
-<section class="apropos" id="apropos">
-    <div class="row">
-        <div class="col50">
-            <h2 class="titre-texte"><span>B</span>ienvenue dans cette formation</h2>
-            <h2>PREPARATION DE  L'ENVIRONNEMENT DE TRAVAIL</h2>
-            <P>
-                Prérequis pour suivre cette formation, vous devez d'abord avoir déjà installé Python et les IDE sur votre ordinateur. Si tel n'est pas le cas cliquez sur ce lien pour apprendre à installer Python et les environnement de développement, Pycharm et Visual Studio Code: <a href="https://jvad2022.github.io/kabor-ismael-kiswendsida/" target="_blank">https://jvad2022.github.io/kabor-ismael-kiswendsida/</a>
-            </P>
-            <h2>Dans cette formation, nous allons assembler toute les pièces du peseur. Restez concentré ne zapé aucune étape surtout mettez des pauses quand vous vous sentez fatigué.A l'issue de cette formation vous serrez capable de réaliser des superbes applications bureau, mobile, un site professionnel et relier l'ensemble à un serveur Web le tous gratuitement</h2>
-            
-            <h2>veuillez regulièrement visiter ce site pour être informer des ajouts, afin de vous perfectionner en python et devenir développeur professionnel et Freelance. </h2>
-        </div>
-        <div class="col50">
-            <div class="img">
-                <img src="./image/1640371817195.jpg" alt="image">
-                <h2>"L'IMAGINATION EST PLUS IMPORTANT QUE LE SAVOIR." EH...!</h2>
-                <h2> CODE AVEC KISWENDSIDA ISMAEL KABORE</h2>
+                <a href="#" class="btn1">Menu</a>
+                <a href="#" class="btn2">Réservation</a>
             </div>
-        </div>
-    </div>
-
-</section>
+        </section>
+        <section class="apropos" id="apropos">
+            <div class="row">
+                <div class="col50">
+                    <h2 class="titre-texte"><span>B</span>ienvenue dans cette formation</h2>
+                    <h2>PREPARATION DE  L'ENVIRONNEMENT DE TRAVAIL</h2>
+                    <P>
+                        Prérequis pour suivre cette formation, vous devez d'abord avoir déjà installé Python et les IDE sur votre ordinateur. Si tel n'est pas le cas cliquez sur ce lien pour apprendre à installer Python et les environnement de développement, Pycharm et Visual Studio Code: <a href="https://jvad2022.github.io/kabor-ismael-kiswendsida/" target="_blank">https://jvad2022.github.io/kabor-ismael-kiswendsida/</a>
+                    </P>
+                    <h2>Dans cette formation, nous allons assembler toute les pièces du peseur. Restez concentré ne zapé aucune étape surtout mettez des pauses quand vous vous sentez fatigué.A l'issue de cette formation vous serrez capable de réaliser des superbes applications bureau, mobile, un site professionnel et relier l'ensemble à un serveur Web le tous gratuitement</h2>
+            
+                    <h2>veuillez regulièrement visiter ce site pour être informer des ajouts, afin de vous perfectionner en python et devenir développeur professionnel et Freelance. </h2>
+                    </div>
+                <div class="col50">
+                    <div class="img">
+                        <img src="./image/1640371817195.jpg" alt="image">
+                        <h2>"L'IMAGINATION EST PLUS IMPORTANT QUE LE SAVOIR." EH...!</h2>
+                        <h2> CODE AVEC KISWENDSIDA ISMAEL KABORE</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 <section class="menu" id="menu">
     <div class="titre">
         <h2 class="titre-texte"><span>C</span>hapitres du cours</h2>
@@ -91,9 +122,9 @@
                     -	Il est relativement simple à prendre en main2 ;
                     -	Enﬁn , il est très utilisé en bio-informatique et plus généralement en analyse de données.
                     Toutes ces caractéristiques font que Python est désormais enseigné dans de nombreuses formations, depuis l’enseignement secondaire jusqu’à l’enseignement supérieur.
+                    <p>
                 </p>
                 <h2>Préparation de l'environnement de travail</h2>
-                <p>
                     a-	Créer un dossier sur votre bureau et nommez le formation_python ;
                     b-	Ouvrez le avec Visual Studio Code ;
                     c-	Cliquez sur file, ensuite sur new file ;
@@ -1328,28 +1359,21 @@ PS C:\Users\Surface\Desktop\formation_python>
         </div>
     </div>
 </section>
+
 <div class="copyright">
     <p>copyright févier 2023 <a href="#">développé par Kiswendsida Ismael KABORE tel: +226 70 22 78 41/ 78 80 74 20 email:jvadconsultingroom@gmail.com</a> site Web FORMATION PYTHON-HTML-CSS-JavaScript-Django. Tous droits reservé</p>
 </div>
-<script type="text/javascript">
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        header.classList.toggle('sticky', window.scrollY > 0 )
 
-    });
-
-
-    function toggleMenu(){
-        const menutoggle = document.querySelector('.menutoggle');
-        const navbar = document.querySelector('.navbar');
-        menutoggle.classList.toggle('active');
-        navbar.classList.toggle('active');
-
-    }
-</script>
 <script src="./index.js"></script>
 
 </body>
+<footer>
+    <div>
+        <a href="mailto:jvadconsultingroom@gmail.com">Cliquez ici pour m'envoyer un message</a>
+    </div>
+
+</footer>
+
 
 </html>
 
