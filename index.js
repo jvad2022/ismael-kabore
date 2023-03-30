@@ -15,6 +15,7 @@ const inputName = document.querySelector('input[type="text"]');
 const select = document.querySelector("select");
 const form = document.querySelector("form");
 const boxes = document.querySelectorAll(".box");
+
 let pseudo = "";
 let appreciation = "";
 
@@ -115,7 +116,7 @@ inputName.addEventListener("input", (e) => {
 });
 
 select.addEventListener("input", (e) => {
-  language = e.target.value;
+  appreciation = e.target.value;
 });
 
 form.addEventListener("submit", (e) => {
@@ -140,7 +141,6 @@ window.addEventListener("load", () => {
 //------------------------------------------------
 // ForEach
 // const boxes = document.getElementsByClassName("box");
-
 boxes.forEach((box) => {
   box.addEventListener("click", (e) => {
     box.style.transform = "scale(0.7)";
@@ -163,6 +163,14 @@ document.body.addEventListener(
   "click",
   () => {
     console.log("click 2 !");
+  },
+  true
+);
+
+document.addEventListener(
+  "focus",
+  function (event) {
+    console.log("something came into focus :" + event.target);
   },
   true
 );
